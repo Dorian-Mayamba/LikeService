@@ -1,9 +1,6 @@
 package uk.movie.LikeService.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.sql.Timestamp;
@@ -17,6 +14,7 @@ import java.sql.Timestamp;
 @Builder
 public class Like {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @Column(name = "user_id")
     private int userId;
